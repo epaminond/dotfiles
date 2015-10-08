@@ -40,6 +40,7 @@ filetype plugin indent on    " required
 set noswapfile
 set tabstop=2 shiftwidth=2 expandtab
 set clipboard+=unnamedplus
+set number
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
