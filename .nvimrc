@@ -41,6 +41,9 @@ set noswapfile
 set tabstop=2 shiftwidth=2 expandtab
 set clipboard+=unnamedplus
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
 syntax on
 colorscheme badwolf
 
