@@ -7,11 +7,11 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=~/.nvim/bundle/neobundle.vim/
+  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -44,6 +44,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set clipboard+=unnamedplus
 set number
 set autoread
+set backupdir=~/.config/nvim/backups
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
