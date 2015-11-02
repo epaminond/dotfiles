@@ -21,6 +21,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'dyng/ctrlsf.vim'
