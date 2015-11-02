@@ -28,6 +28,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'slim-template/vim-slim.git'
 NeoBundle 'badwolf'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'kien/ctrlp.vim'
 
 call neobundle#end()
 
@@ -79,3 +80,8 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 " ctrlsf
 let g:ctrlsf_position = 'right'
 let g:ctrlsf_auto_close = 0
+
+"ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
