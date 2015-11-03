@@ -24,7 +24,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'dyng/ctrlsf.vim'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'slim-template/vim-slim.git'
 NeoBundle 'badwolf'
@@ -52,6 +52,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:gitgutter_realtime = 1
 
+" Press i to enter insert mode, and ii to exit.
+imap ii <Esc>
+
 syntax on
 colorscheme badwolf
 
@@ -78,9 +81,16 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeShowHidden=1
 let g:nerdtree_tabs_open_on_console_startup = 1
 
-" ctrlsf
-let g:ctrlsf_position = 'right'
-let g:ctrlsf_auto_close = 0
+" `ag` is a faster and better replacement for the standard `find`, let Unite use
+" it if it exists and configure to properly use `.gitignore` or `.hgignore`
+" files if those exist.
+" To install `ag`: brew install ag
+" or: https://github.com/ggreer/the_silver_searcher
+if executable("ag")
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 "ctrlp
 let g:ctrlp_map = '<c-p>'
