@@ -75,11 +75,8 @@ nnoremap <A-k> :m .-2<CR>==
 xnoremap p pgvy
 
 " nerdtree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-let g:nerdtree_tabs_open_on_console_startup = 1
 
 " `ag` is a faster and better replacement for the standard `find`, let Unite use
 " it if it exists and configure to properly use `.gitignore` or `.hgignore`
