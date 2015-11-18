@@ -75,7 +75,7 @@ nnoremap <A-k> :m .-2<CR>==
 xnoremap p pgvy
 
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeTabsToggle<CR>
 let NERDTreeShowHidden=1
 
 " `ag` is a faster and better replacement for the standard `find`, let Unite use
