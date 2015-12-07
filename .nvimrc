@@ -23,7 +23,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'slim-template/vim-slim.git'
@@ -57,6 +56,8 @@ imap ii <Esc>
 
 syntax on
 colorscheme badwolf
+hi TabLineSel ctermbg=Green
+hi TabLine ctermbg=LightGrey ctermfg=Black
 
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
@@ -75,7 +76,7 @@ nnoremap <A-k> :m .-2<CR>==
 xnoremap p pgvy
 
 " nerdtree
-map <C-n> :NERDTreeTabsToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " `ag` is a faster and better replacement for the standard `find`, let Unite use
