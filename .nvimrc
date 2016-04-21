@@ -39,6 +39,8 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 " NeoBundleCheckPlugin 'scrooloose/nerdtree'
 
+runtime macros/matchit.vim
+
 " NVIM
 set noswapfile
 set tabstop=2 shiftwidth=2 expandtab
