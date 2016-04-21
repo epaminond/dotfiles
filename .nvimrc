@@ -29,6 +29,7 @@ NeoBundle 'slim-template/vim-slim.git'
 NeoBundle 'badwolf'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'tpope/vim-surround'
 
 call neobundle#end()
 
