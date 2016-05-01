@@ -30,6 +30,7 @@ NeoBundle 'badwolf'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/syntastic'
 
 call neobundle#end()
 
@@ -97,3 +98,12 @@ endif
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
