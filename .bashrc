@@ -79,7 +79,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 
 # Disable inertial scrolling
-synclient CoastingSpeed=0
+synclient CoastingSpeed=0 &> /dev/null
 
 # Customize prompt to wrap long paths and show git branch
 export PROMPT_DIRTRIM=2
