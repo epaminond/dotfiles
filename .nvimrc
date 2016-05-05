@@ -31,6 +31,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'nelstrom/vim-visual-star-search'
 
 call neobundle#end()
 
