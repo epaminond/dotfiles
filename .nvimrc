@@ -32,6 +32,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'tpope/vim-abolish'
 
 call neobundle#end()
 
