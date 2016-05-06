@@ -80,6 +80,10 @@ nnoremap <A-k> :m .-2<CR>==
 " paste multiple times
 xnoremap p pgvy
 
+" fix & command
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
