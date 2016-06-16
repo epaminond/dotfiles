@@ -57,9 +57,6 @@ let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" Press i to enter insert mode, and ii to exit.
-imap ii <Esc>
-
 syntax on
 colorscheme badwolf
 hi TabLineSel ctermbg=Green
