@@ -47,7 +47,7 @@ runtime macros/matchit.vim
 
 " NVIM
 set noswapfile
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 set clipboard+=unnamedplus
 set number
 set autoread
