@@ -72,6 +72,8 @@ nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
+command W w
+
 " move line
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
