@@ -52,6 +52,7 @@ set clipboard+=unnamedplus
 set number
 set autoread
 set backupdir=~/.config/nvim/backups
+set list listchars=tab:▸\ ,eol:¬
 
 let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
