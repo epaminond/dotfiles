@@ -33,6 +33,10 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'tpope/vim-abolish'
+NeoBundle 'matze/vim-move'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'dyng/ctrlsf'
 
 call neobundle#end()
 
@@ -42,6 +46,8 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 " NeoBundleCheckPlugin 'scrooloose/nerdtree'
+
+let g:neobundle#types#git#default_protocol = 'git'
 
 runtime macros/matchit.vim
 
@@ -53,10 +59,16 @@ set number
 set autoread
 set backupdir=~/.config/nvim/backups
 set list listchars=tab:▸\ ,eol:¬
+set autoindent
+set smartindent
+set timeoutlen=500
+set updatetime=500
+set cursorline
 
 let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
 let g:airline#extensions#tabline#enabled = 1
+
 
 syntax on
 colorscheme badwolf
@@ -72,11 +84,13 @@ nnoremap tn  :tabnew<CR>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
 
+nnoremap tm :tabm +1<CR>
+nnoremap tM :tabm -1<CR>
+
 command W w
 
 " move line
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
+let g:move_key_modifier = 'C'
 
 " paste multiple times
 xnoremap p pgvy
