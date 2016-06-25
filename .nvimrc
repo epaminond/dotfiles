@@ -1,53 +1,36 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.nvim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-  " Required:
-  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
-endif
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" Required:
-call neobundle#begin(expand('~/.config/nvim/bundle/'))
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'rking/ag.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'badwolf'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'tpope/vim-abolish'
+Plugin 'matze/vim-move'
+Plugin 'mattn/emmet-vim'
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'slim-template/vim-slim.git'
-NeoBundle 'badwolf'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'matze/vim-move'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'dyng/ctrlsf'
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-" NeoBundleCheckPlugin 'scrooloose/nerdtree'
-
-let g:neobundle#types#git#default_protocol = 'git'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 runtime macros/matchit.vim
 
@@ -69,6 +52,7 @@ let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
 let g:airline#extensions#tabline#enabled = 1
 
+let g:ctrlp_by_filename = 1
 
 syntax on
 colorscheme badwolf
