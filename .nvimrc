@@ -27,6 +27,8 @@ Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-abolish'
 Plugin 'matze/vim-move'
 Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
