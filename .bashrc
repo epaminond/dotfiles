@@ -100,11 +100,13 @@ if ! shopt -oq posix; then
 fi
 
 # Various exports
-export NVM_DIR="/home/epaminond/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$(npm bin):$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

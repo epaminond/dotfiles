@@ -20,7 +20,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'badwolf'
 Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -53,8 +53,6 @@ set cursorline
 let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
 let g:airline#extensions#tabline#enabled = 1
-
-let g:ctrlp_by_filename = 1
 
 syntax on
 colorscheme badwolf
@@ -96,14 +94,9 @@ let NERDTreeShowHidden=1
 " or: https://github.com/ggreer/the_silver_searcher
 if executable("ag")
   let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --ignore \.log'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --ignore \.log --ignore \.node_modules --ignore \.build'
   let g:unite_source_grep_recursive_opt = ''
 endif
-
-"ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "syntastic
 set statusline+=%#warningmsg#
