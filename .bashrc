@@ -110,3 +110,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$(npm bin):$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Android
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
