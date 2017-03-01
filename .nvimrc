@@ -30,6 +30,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'yalesov/vim-emblem'
+Plugin 'yaymukund/vim-rabl'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
