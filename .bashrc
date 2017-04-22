@@ -111,6 +111,10 @@ export PATH="$(npm bin):$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 # Android
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
