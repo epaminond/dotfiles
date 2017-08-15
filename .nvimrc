@@ -22,7 +22,6 @@ Plugin 'badwolf'
 Plugin 'bling/vim-airline'
 Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-abolish'
 Plugin 'matze/vim-move'
@@ -31,6 +30,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'yalesov/vim-emblem'
 Plugin 'yaymukund/vim-rabl'
+Plugin 'wakatime/vim-wakatime'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
