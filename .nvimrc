@@ -101,11 +101,8 @@ if executable("ag")
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-"syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"ale
+let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
+let g:ale_linters = { 'javascript': ['prettier', 'eslint'] }
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--no-semi --single-quote'
