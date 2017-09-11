@@ -15,12 +15,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'slim-template/vim-slim.git'
 Plugin 'badwolf'
 Plugin 'bling/vim-airline'
-Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'tpope/vim-abolish'
@@ -52,6 +53,7 @@ set smartindent
 set timeoutlen=500
 set updatetime=500
 set cursorline
+set mouse=a
 
 let g:airline_powerline_fonts = 1
 let g:gitgutter_realtime = 1
@@ -74,6 +76,8 @@ nnoremap td  :tabclose<CR>
 nnoremap tm :tabm +1<CR>
 nnoremap tM :tabm -1<CR>
 
+tnoremap <Esc> <C-\><C-n>
+
 command W w
 
 " move line
@@ -89,17 +93,6 @@ xnoremap & :&&<CR>
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-" `ag` is a faster and better replacement for the standard `find`, let Unite use
-" it if it exists and configure to properly use `.gitignore` or `.hgignore`
-" files if those exist.
-" To install `ag`: brew install ag
-" or: https://github.com/ggreer/the_silver_searcher
-if executable("ag")
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --ignore \.log --ignore \.node_modules --ignore \.build'
-  let g:unite_source_grep_recursive_opt = ''
-endif
 
 "ale
 let g:ale_fixers = { 'javascript': ['prettier', 'eslint'] }
